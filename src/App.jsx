@@ -1,17 +1,14 @@
+import { Searchbar } from './Searchbar'
+import { ImageGallery } from 'ImageGallery'
+import { Button } from 'Button'
+
 const App = () => {
     return (
-        <div
-            style={{
-                height: '100vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: 40,
-                color: '#010101',
-            }}
-        >
-            React homework template
-        </div>
+        <>
+            <Searchbar></Searchbar>
+            <ImageGallery></ImageGallery>
+            <Button></Button>
+        </>
     )
 }
 export default App
