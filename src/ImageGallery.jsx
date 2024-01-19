@@ -1,27 +1,14 @@
 import { ImageGalleryItem } from 'ImageGalleryItem'
 
-export const ImageGallery = () => {
+export const ImageGallery = ({ arr }) => {
+    const styleUl = { display: 'flex', width: '1000px' }
     return (
-        <ul class="gallery">
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <br />
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <br />
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <br />
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
-            <ImageGalleryItem></ImageGalleryItem>
+        <ul className="gallery" style={styleUl}>
+            {arr.map(e => {
+                return (
+                    <ImageGalleryItem src={e.webformatURL}></ImageGalleryItem>
+                )
+            })}
         </ul>
     )
 }
